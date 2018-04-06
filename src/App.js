@@ -13,6 +13,13 @@ componentDidMount(){
   this.loadList();
 }
 
+handleBooksStatusUpdate(book, shelf){
+  // Function to be passed down to Books.js to the select onChange event
+  // Takes book and shelf and makes request to the server
+  // If request is sucessfull it refreshes the book list in our application with new data
+  BooksAPI.update(book,shelf).then((res) => res && this.loadList());
+
+}
   render(){
     return(
       <div>

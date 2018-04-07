@@ -1,11 +1,12 @@
 import React from 'react';
-{ /*import { Link } from 'react-router-dom';*/}
+import PropTypes from 'prop-types';
+
 
 const Book = ({ bookId, shelf, bookCoverImage, bookTitle, bookAuthors }) => (
 
   <div className= 'book' >
-    <div className='book-top' >
-      <div className='book-cover' style={{ width: 128, height: 193, backgroundImage: `url("${bookCoverImage}")` }} />
+     <div className='book-top'>
+      <div className='book-cover' style={ { width: 128, height: 193, backgroundImage: `url("${ bookCoverImage }")` } } />
       <div className='book-shelf-changer'>
           <select defaultValue={ shelf } 
           onChange={ (e)=> { 
@@ -23,6 +24,21 @@ const Book = ({ bookId, shelf, bookCoverImage, bookTitle, bookAuthors }) => (
     {/* <div className='book-authors'> <Link className='more' to = {`/details/${bookId}` }> More... </Link></div> */}
  </div>
 
-)
+);
+Book.propTypes = {
+  bookId: PropTypes.string.isRequired,
+  shelf: PropTypes.string,
+  bookCoverImage: PropTypes.string,
+  bookTitle: PropTypes.string,
+  bookAuthors: PropTypes.array,
+  handleStatusUpdate: PropTypes.func.isRequired,
+};
+
+Book.defaultProps = {
+  shelf: 'none',
+  bookCoverImage: '',
+  bookTitle: 'Title',
+  bookAuthors: ['No Authors'],
+};
 
 export default Book;

@@ -6,7 +6,8 @@ const  BookShelf =( {bookShelfTitle, books} )=> (
     <div className='bookshelf'>
       <h2 className='bookshelf-title'> { bookShelfTitle }</h2>
       <div className='bookshelf-books'>
-          <ol className='books-grid>'>
+          <ol className='books-grid'>
+          
           {
             books.length >0 && books.map( book => {
               return (

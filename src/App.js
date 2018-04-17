@@ -29,6 +29,10 @@ class App extends Component {
       {/* Search Module */ }
 
       {/* Book Details Route */}
+      <Route
+      path='/details/:bookId'
+      component={loadableBookDetails}
+      />
 
       {/* Home page Route */}
       <Route

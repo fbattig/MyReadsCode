@@ -14,6 +14,7 @@ const Book = ({ bookId, shelf, bookCoverImage, bookTitle, bookAuthors, handleSta
             e.target.value); } }>
             <option value='none' disabled>Move to... </option>
             <option value='currentlyReading' >Currently Reading </option>
+            <option value='wantToRead'>Want To Read </option>
             <option value='read'>Read</option>
             <option value='none'>None </option>
           </select>

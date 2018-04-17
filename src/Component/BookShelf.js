@@ -1,7 +1,7 @@
 import React from 'react';
 import Book from './Book';
 
-const  BookShelf =( {bookShelfTitle, books} )=> (
+const  BookShelf =( {bookShelfTitle, books, handleStatusUpdate} )=> (
   
     <div className='bookshelf'>
       <h2 className='bookshelf-title'> { bookShelfTitle }</h2>
@@ -18,6 +18,7 @@ const  BookShelf =( {bookShelfTitle, books} )=> (
                       bookCoverImage= { book.imageLinks.thumbnail }
                       bookTitle= { book.title }
                       bookAuthors= { book.authors }
+                      handleStatusUpdate={ handleStatusUpdate }
                       { ...book }
                    />
                 </li>

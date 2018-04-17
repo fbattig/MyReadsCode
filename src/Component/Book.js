@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-const Book = ({ bookId, shelf, bookCoverImage, bookTitle, bookAuthors }) => (
+const Book = ({ bookId, shelf, bookCoverImage, bookTitle, bookAuthors, handleStatusUpdate }) => (
 
   <div className= 'book' >
      <div className='book-top'>

@@ -2,7 +2,7 @@ import React from 'react';
 import BookShelf from './BookShelf';
 
 
-const Home = ({books}) => {
+const Home = ({books, handleBookStatusUpdate }) => {
 
   const shelves = [
     {
@@ -32,8 +32,8 @@ const Home = ({books}) => {
              bookShelfTitle ={ bookShelf.name} 
              books={books.filter((book)=> {
                return book.shelf === bookShelf.slug;
-             })}
-             
+             }) }
+             handleStatusUpdate = { handleBookStatusUpdate }
              />
           ))}
           </div>

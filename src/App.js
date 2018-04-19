@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
+import Loadable from 'react-loadable';
 import path from 'path';
 
 import * as BooksAPI from './BooksAPI';
 import Home from './Component/Home';
+import Loading from './Loading';
+
+
+let loadableBookDetails = Loadable({
+loader: ()=> import('./Components/BookDetails'),
+loading: Loading,
+})
 
 class App extends Component {
   state = {
@@ -30,7 +38,7 @@ class App extends Component {
 
       {/* Book Details Route */}
       <Route
-      path='/details/:bookId'
+      path ='/details/:bookId'
       component={loadableBookDetails}
       />
 

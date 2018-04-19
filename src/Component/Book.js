@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 
 const Book = ({ bookId, shelf, bookCoverImage, bookTitle, bookAuthors, handleStatusUpdate }) => (
@@ -22,7 +23,7 @@ const Book = ({ bookId, shelf, bookCoverImage, bookTitle, bookAuthors, handleSta
     </div>
     <div className='book-title' > { bookTitle } </div>
     <div className='book-authors'>{bookAuthors.map((author)=> <span key={ author } > {author} <br /></span>)}</div>
-    {/* <div className='book-authors'> <Link className='more' to = {`/details/${bookId}` }> More... </Link></div> */}
+    <div className='book-authors'> <Link className='more' to = {`/details/${bookId}` }> More... </Link></div> 
  </div>
 
 );

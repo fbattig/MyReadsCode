@@ -11,7 +11,7 @@ const Book = ({ bookId, shelf, bookCoverImage, bookTitle, bookAuthors, handleSta
       <div className='book-shelf-changer'>
           <select defaultValue={ shelf } 
           onChange={ (e)=> { 
-            handleStatusUpdate({ id:bookId }, // handler being set up at App.js 
+            handleStatusUpdate({ id:bookId }, 
             e.target.value); } }>
             <option value='none' disabled>Move to... </option>
             <option value='currentlyReading' >Currently Reading </option>

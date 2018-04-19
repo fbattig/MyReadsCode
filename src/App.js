@@ -9,7 +9,7 @@ import Loading from './Loading';
 
 
 let loadableBookDetails = Loadable({
-loader: ()=> import('./Components/BookDetails'),
+loader: ()=> import('./Component/BookDetails'),
 loading: Loading,
 })
 
